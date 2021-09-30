@@ -1,15 +1,19 @@
+import javafx.scene.image.ImageView;
+
 public class Pais {
 
     String pais;
     String capital;
     int fundacion;
     double superficie;
+    ImageView imageView;
 
-    public Pais(String pais, String capital, int fundacion, double superficie) {
+    public Pais(String pais, String capital, int fundacion, double superficie, ImageView imageView) {
         this.pais = pais;
         this.capital = capital;
         this.fundacion = fundacion;
         this.superficie = superficie;
+        this.imageView = imageView;
     }
 
     public String getPais() {
@@ -42,5 +46,23 @@ public class Pais {
 
     public void setSuperficie(double superficie) {
         this.superficie = superficie;
+    }
+
+    public ImageView getImageView() {
+        return imageView;
+    }
+
+    public void setImageView(ImageView imageView) {
+        this.imageView = imageView;
+    }
+
+    @Override
+    public String toString() {
+        return "Pais{" +
+                "pais='" + pais + '\'' +
+                ", capital='" + capital + '\'' +
+                ", fundacion=" + fundacion +
+                ", superficie=" + superficie +
+                '}';
     }
 }
