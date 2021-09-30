@@ -1,15 +1,24 @@
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ToolBar;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 
-import javax.swing.text.html.ImageView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
     @FXML
-    private ToolBar toolbar;
+    private ToolBar box;
+
+    @FXML
+    void showInfo(MouseEvent event) {
+        System.out.println("ok");
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -38,6 +47,6 @@ public class Controller implements Initializable {
         paises.insertaFinal(mexico);
         paises.insertaFinal(venezuela);
 
-        //toolbar.getItems().add();
+
     }
 }

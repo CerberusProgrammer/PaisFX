@@ -8,12 +8,11 @@ public class Pais {
     double superficie;
     ImageView imageView;
 
-    public Pais(String pais, String capital, int fundacion, double superficie, ImageView imageView) {
+    public Pais(String pais, String capital, int fundacion, double superficie) {
         this.pais = pais;
         this.capital = capital;
         this.fundacion = fundacion;
         this.superficie = superficie;
-        this.imageView = imageView;
     }
 
     public String getPais() {
@@ -48,13 +47,6 @@ public class Pais {
         this.superficie = superficie;
     }
 
-    public ImageView getImageView() {
-        return imageView;
-    }
-
-    public void setImageView(ImageView imageView) {
-        this.imageView = imageView;
-    }
 
     @Override
     public String toString() {

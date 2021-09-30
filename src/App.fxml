@@ -7,17 +7,67 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
-   <top>
-      <ToolBar fx:id="toolbar" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <ToolBar fx:id="box" prefHeight="152.0" prefWidth="1280.0">
          <items>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
                <image>
                   <Image url="@img/argentina.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/bolivia.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/brasil.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/canada.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/chile.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/colombia.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/costarica.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/cuba.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/estadosunidos.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/mexico.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#showInfo" pickOnBounds="true">
+               <image>
+                  <Image url="@img/venezuela.png" />
+               </image>
+            </ImageView>
          </items>
       </ToolBar>
-   </top>
-</BorderPane>
+      <AnchorPane layoutX="1.0" layoutY="119.0" prefHeight="600.0" prefWidth="1280.0" />
+   </children>
+</AnchorPane>
