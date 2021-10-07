@@ -8,17 +8,34 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
+import java.awt.*;
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
+import java.util.List;
 
-public class Controller implements Initializable {
+public class Controller<T> implements Initializable {
 
     @FXML
     private ToolBar box;
 
+    List<Pais> paises = new ArrayList<>();
+
     @FXML
     void showInfo(MouseEvent event) {
         System.out.println("ok");
+    }
+
+    void update() {
+        box.getItems().clear();
+        for (Pais pais: paises) {
+            box.getItems().add(pais.getImageView());
+        }
+    }
+
+    @FXML
+    void shuffle(ActionEvent event) {
+        Collections.shuffle(paises);
+        update();
     }
 
     @Override
@@ -46,19 +63,18 @@ public class Controller implements Initializable {
         Pais venezuela = new Pais("Venezuela", "Caracas", 1811, 0.916445,
                 new ImageView("img/venezuela_adobespark.png"));
 
-        Lista<Pais> paises = new Lista<>();
-        paises.insertaInicio(argentina);
-        paises.insertaFinal(bolivia);
-        paises.insertaFinal(brasil);
-        paises.insertaFinal(canada);
-        paises.insertaFinal(chile);
-        paises.insertaFinal(colombia);
-        paises.insertaFinal(costarica);
-        paises.insertaFinal(cuba);
-        paises.insertaFinal(estadosunidos);
-        paises.insertaFinal(mexico);
-        paises.insertaFinal(venezuela);
+        paises.add(argentina);
+        paises.add(bolivia);
+        paises.add(brasil);
+        paises.add(canada);
+        paises.add(chile);
+        paises.add(colombia);
+        paises.add(costarica);
+        paises.add(cuba);
+        paises.add(estadosunidos);
+        paises.add(mexico);
+        paises.add(venezuela);
 
-        box.getItems().add(paises.getInicio().getImageView());
+        update();
     }
 }

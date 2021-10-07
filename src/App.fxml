@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,13 +8,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="246.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <ToolBar fx:id="box" layoutX="17.0" layoutY="72.0" prefHeight="160.0" prefWidth="1247.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0,0,0);" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="72.0" />
-      <ToolBar layoutX="233.0" layoutY="14.0" prefHeight="44.0" prefWidth="831.0" style="-fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0,0,0);">
+      <ToolBar layoutX="17.0" layoutY="14.0" prefHeight="44.0" prefWidth="426.0" style="-fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0,0,0);">
         <items>
-          <Button mnemonicParsing="false" text="Button" />
+          <Button mnemonicParsing="false" onAction="#shuffle" text="Shuffle" />
         </items>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets left="20.0" top="20.0" />
+         </opaqueInsets>
       </ToolBar>
    </children>
 </AnchorPane>

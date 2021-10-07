@@ -1,4 +1,6 @@
-public class Lista<T> {
+import java.util.Iterator;
+
+public class Lista<T> implements Iterable<Pais>{
 
     private Nodo<T> inicio;
 
@@ -93,5 +95,25 @@ public class Lista<T> {
         else
             return "vacio";
         return string;
+    }
+
+    @Override
+    public Iterator<Pais> iterator() {
+        Nodo<T> n = inicio;
+
+        return new Iterator<Pais>() {
+            @Override
+            public boolean hasNext() {
+                if (n.getSig() != null)
+                    return true;
+                else
+                    return false;
+            }
+
+            @Override
+            public Pais next() {
+                return (Pais) n.getSig().getInfo();
+            }
+        };
     }
 }
